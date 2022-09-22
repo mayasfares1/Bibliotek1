@@ -1,4 +1,5 @@
 import DB.Facade;
+import Entitet.Bog;
 import Entitet.Låner;
 import MineUtil.BrugerInput;
 
@@ -19,6 +20,11 @@ public class Main {
                             BrugerInput.getString("angiv adresse"),
                             BrugerInput.getInt("angiv postnr"));
                              Facade.opretLåner(låner);
+
+                case "opret bog":
+                    Bog bog = new Bog(BrugerInput.getString("angiv forfatter"),
+                            BrugerInput.getString("angiv title"),BrugerInput.getInt("angiv årstal"));
+                    Facade.opretBog(bog);
 
             }
         }
