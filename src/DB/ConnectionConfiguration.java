@@ -1,6 +1,6 @@
 package DB;
 
-import MineUtil.BrugerInput;
+import MineUtil.UI;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -13,7 +13,7 @@ public class ConnectionConfiguration
 
         if (pass == null) {
 
-            pass = BrugerInput.getString("angiv password");
+            pass = UI.getString("angiv password");
         }
 
 
